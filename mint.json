@@ -69,7 +69,7 @@
       ]
     },
     {
-      "group": "Soft UI",
+      "group": "softui",
       "pages": [
         "softui/introduction"
       ]
