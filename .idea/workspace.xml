@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ad06fe69-b996-4b87-92ff-d4ce1bb57e1a" name="Changes" comment="initial push" />
+    <list default="true" id="ad06fe69-b996-4b87-92ff-d4ce1bb57e1a" name="Changes" comment="initial push">
+      <change beforePath="$PROJECT_DIR$/soft-ui/code.mdx" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,6 +31,9 @@
   &quot;associatedIndex&quot;: 0
 }</component>
   <component name="ProjectId" id="2ikVFikJgR3XmSZsONEX9kpXxES" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -41,7 +46,7 @@
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/IamXample/Documents/GitHub/docs/images",
+    "last_opened_file_path": "C:/Users/IamXample/Documents/GitHub/docs/soft-ui",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -53,6 +58,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\IamXample\Documents\GitHub\docs\soft-ui" />
       <recent name="C:\Users\IamXample\Documents\GitHub\docs\images" />
       <recent name="C:\Users\IamXample\Documents\GitHub\docs\logo" />
     </key>
@@ -173,7 +179,7 @@
       <option name="presentableId" value="Default" />
       <updated>1720034459840</updated>
       <workItem from="1720034460854" duration="837000" />
-      <workItem from="1720035318517" duration="2027000" />
+      <workItem from="1720035318517" duration="2343000" />
     </task>
     <task id="LOCAL-00001" summary="initial push">
       <option name="closed" value="true" />
