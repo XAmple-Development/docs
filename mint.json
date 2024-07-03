@@ -23,7 +23,7 @@
   ],
   "topbarCtaButton": {
     "name": "Dashboard",
-    "url": "http://dashboard.x-ampledevelopment.com"
+    "url": "http://dashboard.x-ampledevelopment.com:3000"
   },
   "tabs": [
     {
