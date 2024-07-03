@@ -1,0 +1,51 @@
+---
+title: "Input"
+---
+
+```
+DBD.formTypes.input(placeholder, min, max, disabled, required),
+```
+
+<ParamField path="placeholder" type="string" required>
+  Input placeholder.
+</ParamField>
+<ParamField path="min" type="number" required>
+  Minimum length.
+</ParamField>
+<ParamField path="max" type="number" required>
+  Maximum length.
+</ParamField>
+<ParamField path="disabled" type="boolean" required>
+  Indicate if the input should be disabled or not.
+</ParamField>
+<ParamField path="required" type="boolean" required>
+  Indicate if the input should be required or not.
+</ParamField>
+
+## Data required for getActualSet function
+
+String, value to be displayed.
+
+## Data returned
+
+String, value set | or null.
+
+## Example Usage
+
+```javascript
+{
+    optionId: 'prefix',
+    optionName: "Prefix",
+    optionDescription: "Set bot prefix.",
+    optionType: DBD.formTypes.input('Prefix', 1, 4, false, false), // reqired false (if empty reset to default)
+    getActualSet: async ({guild}) => {
+        return prefixData[guild.id] || '!';
+    },
+    setNew: async ({guild,newData}) => {
+        prefixData[guild.id] = newData || '!';
+        return;
+    }
+},
+```
+
+<img height="200" src="/images/formtypes/dbd-input.png" />

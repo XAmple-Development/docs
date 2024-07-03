@@ -7,12 +7,12 @@
   },
   "favicon": "/favicon.png",
   "colors": {
-    "primary": "#0D9373",
-    "light": "#07C983",
-    "dark": "#0D9373",
+    "primary": "#ff0080",
+    "light": "#e3e3e5",
+    "dark": "#ff0080",
     "anchors": {
-      "from": "#0D9373",
-      "to": "#07C983"
+      "from": "#963fc9",
+      "to": "#e5088f"
     }
   },
   "topbarLinks": [
@@ -23,7 +23,7 @@
   ],
   "topbarCtaButton": {
     "name": "Dashboard",
-    "url": "http://dashboard.x-ampledevelopment.com:3000"
+    "url": "https://assistantscenter.com"
   },
   "primaryTab": {
     "name": "Home"
@@ -172,8 +172,7 @@
     }
   ],
   "footerSocials": {
-    "x": "https://x.com/dannyxample",
-    "github": "https://github.com/XAmple-Development",
-    "discord": "https://discord.gg/xampledev"
+    "discord": "https://discord.gg/xampledev",
+    "github": "https://github.com/XAmple-Development"
   }
 }

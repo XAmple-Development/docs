@@ -1,0 +1,40 @@
+---
+title: "Preloader"
+description: "An Object which contains all the information for the preloader."
+---
+
+```js
+theme: SoftUI({
+  preloader: {
+    image: String,
+    spinner: Boolean,
+    text: String,
+  },
+});
+```
+
+## Example Usage
+
+```js
+theme: SoftUI({
+  preloader: {
+      image: "/img/soft-ui.webp",
+      spinner: false,
+      text: "Page is loading"
+  },
+})
+```
+
+## Props
+
+<ParamField path="image" type="string">
+  The image for the preloader
+</ParamField>
+
+<ParamField path="spinner" type="boolean" required>
+  Disables the image and displays a spinner instead
+</ParamField>
+
+<ParamField path="text" type="string" required>
+  The text for the preloader
+</ParamField>

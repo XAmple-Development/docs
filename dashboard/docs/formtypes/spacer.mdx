@@ -1,0 +1,32 @@
+---
+title: "Spacer"
+---
+
+Usage is kinda different for this one. You don’t need to define getActualSet, etc. Just define an option as:
+
+```js
+{
+    optionType: 'spacer',
+    title: string,
+    description: string
+}
+```
+
+<ParamField path="title" type="string" required>
+  Title string for spacer. You can use HTML there.
+</ParamField>
+<ParamField path="description" type="string" required>
+  Description string for spacer. You can use HTML there.
+</ParamField>
+
+## Example Usage
+
+```javascript
+{
+    optionType: 'spacer',
+    title: 'Spacer!',
+    description: 'This is just spacing and even not an option, but yeah! Cool 😎'
+}
+```
+
+<img height="200" src="/images/formtypes/dbd-spacer.png" />

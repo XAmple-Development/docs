@@ -1,0 +1,50 @@
+---
+title: "Sweet Alert"
+description: "An Object which contains all the SweetAlert information."
+---
+
+```js
+theme: SoftUI({
+  sweetalert: {
+    errors: {
+      requirePremium: String,
+    },
+    success: {
+      login: String,
+    },
+  },
+});
+```
+
+## Example Usage
+
+```js
+theme: SoftUI({
+  sweetalert: {
+    errors: {
+      requirePremium: "You need to be a premium member to do this.",
+    },
+    success: {
+      login: "Successfully logged in.",
+    },
+  },
+});
+```
+
+## Props
+
+<ResponseField name="errors" type="Object" required>
+  <Expandable title="properties" defaultOpen>
+    <ResponseField name="requirePremium" type="string" required>
+      The error message for premium users
+    </ResponseField>
+  </Expandable>
+</ResponseField>
+
+<ResponseField name="success" type="Object" required>
+  <Expandable title="properties" defaultOpen>
+    <ResponseField name="login" type="string" required>
+      The success message for logged in users
+    </ResponseField>
+  </Expandable>
+</ResponseField>

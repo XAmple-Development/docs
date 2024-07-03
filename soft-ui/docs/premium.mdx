@@ -1,0 +1,71 @@
+---
+title: "Premium"
+description: "An Object which contains all the premium information."
+---
+
+```js
+theme: SoftUI({
+  premium: {
+    enabled: Boolean,
+    card: {
+      title: String,
+      description: String,
+      bgImage: String,
+      button: {
+        text: String,
+        url: String,
+      },
+    },
+  },
+});
+```
+
+## Example Usage
+
+```js
+theme: SoftUI({
+  premium: {
+    enabled: true,
+    card: {
+      title: "Want more from Assistants?",
+      description: "Check out premium features below!",
+      bgImage:
+        "https://assistantscenter.com/wp-content/uploads/2021/11/cropped-cropped-logov6.png",
+      button: {
+        text: "Become Premium",
+        url: "https://patreon.com/sharkybot",
+      },
+    },
+  },
+});
+```
+
+## Props
+
+<ResponseField name="enabled" type="boolean" required>
+  Indicate if the premium card should be enabled
+</ResponseField>
+
+<ResponseField name="card" type="Object">
+  <Expandable title="properties" defaultOpen>
+    <ResponseField name="title" type="string" required>
+      The title of the premium card
+    </ResponseField>
+    <ResponseField name="description" type="string" required>
+      The description of the premium card
+    </ResponseField>
+    <ResponseField name="bgImage" type="string" required>
+      The background image of the premium card
+    </ResponseField>
+    <ResponseField name="button" type="Object" required>
+      <Expandable title="properties" defaultOpen>
+        <ResponseField name="text" type="string" required>
+          The text of the button
+        </ResponseField>
+        <ResponseField name="url" type="string" required>
+          The link of the button
+        </ResponseField>
+      </Expandable>
+    </ResponseField>
+  </Expandable>
+</ResponseField>

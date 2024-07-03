@@ -1,0 +1,95 @@
+---
+title: "Commands"
+description: "An Array which contains all categories and commands for the commands page."
+---
+
+```js
+theme: SoftUI({
+  commands: [
+    {
+      category: String,
+      subTitle: String,
+      categoryId: String,
+      image: String,
+      hideAlias: Boolean, // Optional - Default: false - Hides the alias from all commands in the category
+      hideDescription: Boolean, // Optional - Default: false - Hides the description from all commands in the category
+      hideSidebarItem: Boolean, // Optional - Default: false - Hides the category from the sidebar
+      list: [
+        {
+          commandName: String,
+          commandUsage: String,
+          commandDescription: String,
+          commandAlias: String,
+        },
+      ],
+    },
+  ],
+});
+```
+
+## Example Usage
+
+```js
+theme: SoftUI({
+  commands: [
+    {
+      category: "category",
+      subTitle: "subTitle",
+      categoryId: "category-id", // No spaces or special characters
+      image: "<img src='link to image'>",
+      hideAlias: false, // Optional - Default: false - Hides the alias from all commands in the category
+      hideDescription: false, // Optional - Default: false - Hides the description from all commands in the category
+      hideSidebarItem: false, // Optional - Default: false - Hides the category from the sidebar
+      list: [
+        {
+          commandName: "cmdname",
+          commandUsage: "usage",
+          commandDescription: "Command description",
+          commandAlias: "alias",
+        },
+      ],
+    },
+  ],
+});
+```
+
+## Props
+
+<ParamField path="category" type="string" required>
+  The name of the category
+</ParamField>
+<ParamField path="subTitle" type="string" required>
+  The subtitle of the category
+</ParamField>
+<ParamField path="categoryId" type="string" required>
+  Unique id of the category
+</ParamField>
+<ParamField path="image" type="string" required>
+  URL of the image
+</ParamField>
+<ParamField path="hideAlias" type="boolean">
+  Hides the alias from all commands in the category
+</ParamField>
+<ParamField path="hideDescription" type="boolean">
+  Hides the description from all commands in the category
+</ParamField>
+<ParamField path="hideSidebarItem" type="boolean">
+  Hides the category from the sidebar
+</ParamField>
+
+<ResponseField name="list" type="Array" required>
+  <Expandable title="properties" defaultOpen>
+    <ResponseField name="commandName" type="string" required>
+      The name of the command
+    </ResponseField>
+    <ResponseField name="commandUsage" type="string" required>
+      The usage of the command
+    </ResponseField>
+    <ResponseField name="commandDescription" type="string" required>
+      The description of the command
+    </ResponseField>
+    <ResponseField name="commandAlias" type="string" required>
+      The alias of the command
+    </ResponseField>
+  </Expandable>
+</ResponseField>

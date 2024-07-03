@@ -1,0 +1,46 @@
+---
+title: "Sidebar"
+description: "An Object which contains all the sidebar information."
+---
+
+```js
+theme: SoftUI({
+  sidebar: {
+    gestures: {
+      disabled: Boolean,
+      gestureTimer: Number,
+      gestureSensitivity: Number,
+    },
+  },
+});
+```
+
+## Example Usage
+
+```js
+theme: SoftUI({
+  sidebar: {
+    gestures: {
+      disabled: false,
+      gestureTimer: 200,
+      gestureSensitivity: 50,
+    },
+  },
+});
+```
+
+## Props
+
+<ResponseField name="gestures" type="Object" required>
+  <Expandable title="properties" defaultOpen>
+    <ResponseField name="disabled" type="boolean" required>
+      Indicate if the sidebar should be disabled
+    </ResponseField>
+    <ResponseField name="gestureTimer" type="number">
+      The gesture timer in milliseconds
+    </ResponseField>
+    <ResponseField name="gestureSensitivity" type="number">
+      The gesture sensitivity in pixels
+    </ResponseField>
+  </Expandable>
+</ResponseField>

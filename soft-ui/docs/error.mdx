@@ -1,0 +1,67 @@
+---
+title: "Error"
+description: "An Object which contains all the error information."
+---
+
+```js
+theme: SoftUI({
+  error: {
+    error404: {
+      title: String,
+      subtitle: String,
+      description:
+        String,
+    },
+    dbdError: {
+      disableSecretMenu: Boolean,
+      secretMenuCombination: String[],
+    },
+  },
+});
+```
+
+## Example Usage
+
+```js
+theme: SoftUI({
+  error: {
+    error404: {
+      title: "Error 404",
+      subtitle: "Page Not Found",
+      description:
+        "It seems you have stumbled into the abyss. Click the button below to return to the dashboard",
+    },
+    dbdError: {
+      disableSecretMenu: false,
+      secretMenuCombination: ["69", "82", "82", "79", "82"],
+    },
+  },
+});
+```
+
+## Props
+
+<ResponseField name="error404" type="Object">
+  <Expandable title="properties" defaultOpen>
+    <ResponseField name="title" type="string" required>
+      The title of the error 404 page
+    </ResponseField>
+    <ResponseField name="subtitle" type="string" required>
+      The subtitle of the error 404 page
+    </ResponseField>
+    <ResponseField name="description" type="string" required>
+      The description shown on the error 404 page
+    </ResponseField>
+  </Expandable>
+</ResponseField>
+
+<ResponseField name="dbdError" type="Object">
+  <Expandable title="properties" defaultOpen>
+    <ResponseField name="disableSecretMenu" type="boolean" required>
+      Indicate if the secret keybind should be disabled
+    </ResponseField>
+    <ResponseField name="secretMenuCombination" type="string[]" required>
+      The key combination to view the secret menu
+    </ResponseField>
+  </Expandable>
+</ResponseField>

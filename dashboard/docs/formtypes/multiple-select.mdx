@@ -1,0 +1,49 @@
+---
+title: "Multiple Select"
+---
+
+```
+DBD.formTypes.multiSelect(list, disabled, required),
+```
+
+<ParamField path="list" type="object" required>
+    Available values: `{ displayName: valueReturned, displayName2: valueReturned2 }`
+</ParamField>
+
+<ParamField path="disabled" type="boolean" required>
+  Indicate if the select should be disabled or not.
+</ParamField>
+
+<ParamField path="required" type="boolean" required>
+  Indicate if the select should be required or not.
+</ParamField>
+
+## Data required for getActualSet function
+
+Array, list of `valueReturned` to be selected.
+
+<Important> If any, return empty Array - **no null or undefined**.</Important>
+
+## Data returned
+
+Array, list of selected `valueReturned` values | or an empty Array.
+
+## Example Usage
+
+```javascript
+{
+    optionId: 'multiselect',
+    optionName: "Multi Select",
+    optionDescription: "Select MultiValues",
+    optionType: DBD.formTypes.multiSelect({foo: 'bar', sam: 'ple', oh: 'oh', boo: 'oob'}, false, true),
+    getActualSet: async ({guild}) => {
+        return multiData[guild.id] || []; // !
+    },
+    setNew: async ({guild,newData}) => {
+        multiData[guild.id] = newData;
+        return;
+    }
+},
+```
+
+<img height="200" src="/images/formtypes/dbd-multiselect.png" />

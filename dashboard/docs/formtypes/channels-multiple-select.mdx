@@ -1,0 +1,59 @@
+---
+title: "Channels Multiple Select"
+---
+
+```
+DBD.formTypes.channelsMultiSelect(disabled, required, channelTypes = [ChannelType.GuildText], hideNSW, onlyNSFW, hideNoAccess),
+```
+
+<ParamField path="disabled" type="boolean" required>
+  Indicate if the select should be disabled or not.
+</ParamField>
+
+<ParamField path="required" type="boolean" required>
+  Indicate if the multiple select should be required or not.
+</ParamField>
+
+<ParamField path="channelTypes" type="array" required>
+  Types of channels that should be included in the select.
+</ParamField>
+
+<ParamField path="hideNSW" type="boolean">
+  Indicate if the NSFW channels should be hidden or not.
+</ParamField>
+
+<ParamField path="onlyNSFW" type="boolean">
+  Indicate if the only NSFW channels should be shown or not.
+</ParamField>
+
+<ParamField path="hideNoAccess" type="boolean">
+  Indicate if the no access channels should be hidden or not.
+</ParamField>
+
+## Data required for getActualSet function
+
+Array of Strings (Channels IDs) | or an empty Array.
+
+## Data returned
+
+Array of Strings (Channels IDs) | or an empty Array.
+
+## Example Usage
+
+```javascript
+{
+    optionId: 'multiple_channels',
+    optionName: "Multiple Channels",
+    optionDescription: "Select multiple channels from this guild.",
+    optionType: DBD.formTypes.channelsMultiSelect(false, true, [ChannelType.GuildText]),
+    getActualSet: async ({guild}) => {
+        return multiChannels[guild.id] || []; // !
+    },
+    setNew: async ({guild,newData}) => {
+        multiChannels[guild.id] = newData;
+        return;
+    }
+},
+```
+
+<img height="200" src="/images/formtypes/dbd-channelsmultipleselect.png" />

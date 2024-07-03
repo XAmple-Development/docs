@@ -1,0 +1,91 @@
+---
+title: "Icons"
+description: "An Object which contains all the icons used in the website."
+---
+
+```js
+theme: SoftUI({
+  icons: {
+    backgroundImage: String,
+    favicon: String,
+    noGuildIcon: String,
+    sidebar: {
+      darkUrl: String,
+      lightUrl: String,
+      hideName: Boolean,
+      borderRadius: Boolean,
+      alignCenter: Boolean,
+    },
+  },
+});
+```
+
+## Example Usage
+
+```js
+theme: SoftUI({
+  icons: {
+    backgroundImage:
+      "https://www.imageshine.in/uploads/gallery/geometric-Blue-Wallpaper-Free-Download.jpg",
+    favicon:
+      "https://assistantscenter.com/wp-content/uploads/2021/11/cropped-cropped-logov6.png",
+    noGuildIcon:
+      "https://pnggrid.com/wp-content/uploads/2021/05/Discord-Logo-Circle-1024x1024.png",
+    sidebar: {
+      darkUrl:
+        "https://assistantscenter.com/api/user/avatar/63ad65e2d3f1b1b3acdff794",
+      lightUrl:
+        "https://assistantscenter.com/api/user/avatar/63ad65e2d3f1b1b3acdff794",
+      hideName: true,
+      borderRadius: false,
+      alignCenter: true,
+    },
+  },
+});
+```
+
+## Props
+
+<ResponseField name="backgroundImage" type="string" required>
+  The background image of the website
+</ResponseField>
+
+<ResponseField name="favicon" type="string" required>
+  The favicon of the website
+</ResponseField>
+
+<ResponseField name="noGuildIcon" type="string" required>
+  The image of a guild with no icon
+</ResponseField>
+
+<ResponseField name="sidebar" type="Object" required>
+  <Expandable title="properties" defaultOpen>
+    <ResponseField name="darkUrl" type="string" required>
+      The icon of the website when using dark mode
+    </ResponseField>
+    <ResponseField name="lightUrl" type="string" required>
+      The icon of the website when using light mode
+    </ResponseField>
+    <ResponseField name="hideName" type="boolean" required>
+      Whether you'd like to hide the website name next to the icon
+    </ResponseField>
+    <ResponseField name="borderRadius" type="boolean | number" required>
+      Whether you'd like to set the border radius of the icon
+    </ResponseField>
+    <ResponseField name="alignCenter" type="boolean" required>
+      Whether you'd like to align the icon to the center
+    </ResponseField>
+  </Expandable>
+</ResponseField>
+
+If you want to disable the border radius, you can do so by setting this to false.
+
+```js
+theme: SoftUI({
+  icons: {
+    sidebar: {
+      borderRadius: false,
+    },
+  },
+});
+```

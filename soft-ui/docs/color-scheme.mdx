@@ -1,0 +1,60 @@
+---
+title: "Color Scheme"
+description: "A String which sets the color scheme of the whole website."
+---
+
+```js
+theme: SoftUI({
+  colorScheme: string,
+});
+```
+
+## Available Colors
+
+- dark
+- pink
+- blue
+- red
+- green
+- yellow
+
+## Example Usage
+
+```js
+theme: SoftUI({
+  colorScheme: "pink",
+});
+```
+
+## Custom Color Scheme
+
+You can also define your own color scheme by setting the `colorScheme` to custom and adding the `themeColors` Object.
+
+### Example Usage
+
+```js
+theme: SoftUI({
+  colorScheme: "custom",
+  themeColors: {
+    primaryColor: "#ff0000",
+    secondaryColor: "#ff0000",
+  },
+});
+```
+
+## Props
+
+<ParamField path="colorScheme" type="string" required>
+  The color scheme of the website
+</ParamField>
+
+<ResponseField name="themeColors" type="Object">
+  <Expandable title="properties" defaultOpen>
+    <ResponseField name="primaryColor" type="string" required>
+      The primary color of the website as HEX code
+    </ResponseField>
+    <ResponseField name="secondaryColor" type="string">
+      The secondary color of the website as HEX code
+    </ResponseField>
+  </Expandable>
+</ResponseField>

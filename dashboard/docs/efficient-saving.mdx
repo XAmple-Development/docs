@@ -1,0 +1,61 @@
+---
+title: "Efficient Saving System"
+description: "Use a modified version of the save system to save all settings at once, rather than save each option individually."
+---
+
+```js
+new DBD.Dashboard({
+  useCategorySet: Boolean,
+});
+```
+
+## Example Usage
+
+```javascript
+new DBD.Dashboard({
+  useCategorySet: true,
+});
+```
+
+By enabling this, you must make some changes to your settings.
+
+```js
+settings: [
+{
+    categoryId: 'setup',
+    categoryName: "Setup",
+    categoryDescription: "Setup your bot with default settings!",
+    getActualSet: async ({guild}) => {
+        return [
+        {
+            optionId: "lang", // optionId, must be EXACTLY the same
+            data: langsSettings[guild.id] || null // what you would normally return in getActualSet
+        }
+        ]
+    },
+    setNew: async ({ guild, newData }) => {
+        // data = [ { optionId: 'lang', data: 'fr' } ]
+        for(const option of newData) {
+            if(option.optionId === "lang") langsSettings[guild.id] = option.data;
+        }
+        // Errors still work!
+        // Allowed check still works, but needs to be on the option itself, not the category.
+        return;
+    },
+    categoryOptionsList: [
+        {
+            optionId: 'lang',
+            optionName: "Language",
+            optionDescription: "Change bot's language easily",
+            optionType: DBD.formTypes.select({"Polish": 'pl', "English": 'en', "French": 'fr'})
+       },
+    ]
+    },
+],
+```
+
+## Props
+
+<ParamField path="useCategorySet" type="boolean" required>
+  If you want to use the efficient saving system.
+</ParamField>

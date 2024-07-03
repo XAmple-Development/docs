@@ -1,0 +1,51 @@
+---
+title: "Admin"
+description: "An Object which contains all the information for the admin page."
+---
+
+```js
+theme: SoftUI({
+  admin: {
+    pterodactyl: {
+      enabled: Boolean,
+      apiKey: String,
+      panelLink: String,
+      serverUUIDs: String[],
+    },
+  },
+});
+```
+
+## Example Usage
+
+```js
+theme: SoftUI({
+  admin: {
+    pterodactyl: {
+      enabled: false,
+      apiKey: "myPterodactylApiKey",
+      panelLink: "https://panel.example.com",
+      serverUUIDs: ["server-uuid-1", "server-uuid-2"],
+    },
+  },
+});
+```
+
+## Props
+
+<ResponseField name="pterodactyl" type="Object" required>
+  <Expandable title="properties" defaultOpen>
+    <ResponseField name="enabled" type="boolean" required>
+      Indicate if the pterodactyl section should be enabled
+    </ResponseField>
+    <ResponseField name="apiKey" type="string">
+      The API key for the pterodactyl panel
+    </ResponseField>
+    <ResponseField name="panelLink" type="string">
+      Link to your pterodactyl panel
+    </ResponseField>
+    <ResponseField name="serverUUIDs" type="string[]">
+      UUIDs of the servers you wish to control
+    </ResponseField>
+  </Expandable>
+</ResponseField>
