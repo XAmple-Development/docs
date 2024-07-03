@@ -27,8 +27,12 @@
   },
   "tabs": [
     {
-      "name": "Bot Commands",
-      "url": "api-reference"
+      "name": "X-Ample Dashboard",
+      "url": "dashboard"
+    },
+    {
+      "name": "Soft UI",
+      "url": "soft-ui"
     }
   ],
   "anchors": [
@@ -69,10 +73,8 @@
       ]
     },
     {
-      "group": "softui",
-      "pages": [
-        "softui/introduction"
-      ]
+      "group": "Soft UI",
+      "pages": ["soft-ui/introduction"]
     },
     {
       "group": "API Documentation",
