@@ -25,9 +25,17 @@
     "name": "Dashboard",
     "url": "http://dashboard.x-ampledevelopment.com:3000"
   },
+  "primaryTab": {
+    "name": "Home"
+  },
+  "feedback": {
+    "thumbsRating": true,
+    "suggestEdit": true,
+    "raiseIssue": false
+  },
   "tabs": [
     {
-      "name": "X-Ample Dashboard",
+      "name": "Discord Dashboard",
       "url": "dashboard"
     },
     {
@@ -35,41 +43,80 @@
       "url": "soft-ui"
     }
   ],
-  "anchors": [
-    {
-      "name": "Documentation",
-      "icon": "book-open-cover",
-      "url": "https://mintlify.com/docs"
-    },
-    {
-      "name": "Community",
-      "icon": "slack",
-      "url": "https://mintlify.com/community"
-    },
-    {
-      "name": "Blog",
-      "icon": "newspaper",
-      "url": "https://mintlify.com/blog"
-    }
-  ],
+
   "navigation": [
     {
       "group": "Get Started",
-      "pages": [
-        "introduction",
-        "quickstart",
-        "development"
-      ]
+      "pages": ["introduction", "quickstart"]
     },
     {
       "group": "Essentials",
       "pages": [
-        "essentials/markdown",
-        "essentials/code",
-        "essentials/images",
-        "essentials/settings",
-        "essentials/navigation",
-        "essentials/reusable-snippets"
+        "essentials/categories",
+        "essentials/options",
+        "essentials/formtypes"
+      ]
+    },
+
+    {
+      "group": "Discord Dashboard",
+      "pages": ["dashboard/introduction"]
+    },
+    {
+      "group": "Required Configuration",
+      "pages": [
+        "dashboard/docs/bot",
+        "dashboard/docs/client",
+        "dashboard/docs/domain",
+        "dashboard/docs/port",
+        "dashboard/docs/settings",
+        "dashboard/docs/redirectUri",
+        "dashboard/docs/theme"
+      ]
+    },
+    {
+      "group": "Optional Configuration",
+      "pages": [
+        "dashboard/docs/accept-privacy-policy",
+        "dashboard/docs/dont-create-server",
+        "dashboard/docs/efficient-saving",
+        "dashboard/docs/invite-endpoint",
+        "dashboard/docs/join-guild",
+        "dashboard/docs/minimized-logs",
+        "dashboard/docs/rate-limits",
+        "dashboard/docs/required-permissions",
+        "dashboard/docs/session-store",
+        "dashboard/docs/ssl",
+        "dashboard/docs/support-server",
+        "dashboard/docs/under-maintenance"
+      ]
+    },
+    {
+      "group": "Form Types",
+      "pages": [
+        "dashboard/docs/formtypes/channels-multiple-select",
+        "dashboard/docs/formtypes/channels-select",
+        "dashboard/docs/formtypes/checkbox",
+        "dashboard/docs/formtypes/color-select",
+        "dashboard/docs/formtypes/embed-builder",
+        "dashboard/docs/formtypes/input",
+        "dashboard/docs/formtypes/multiple-select",
+        "dashboard/docs/formtypes/roles-multiple-select",
+        "dashboard/docs/formtypes/roles-select",
+        "dashboard/docs/formtypes/select",
+        "dashboard/docs/formtypes/spacer",
+        "dashboard/docs/formtypes/switch",
+        "dashboard/docs/formtypes/text-area"
+      ]
+    },
+    {
+      "group": "Methods",
+      "pages": [
+        "dashboard/docs/methods/3rd-party-module",
+        "dashboard/docs/methods/create-custom-page",
+        "dashboard/docs/methods/dashboard-events",
+        "dashboard/docs/methods/settings-handler",
+        "dashboard/docs/methods/websockets"
       ]
     },
     {
@@ -77,17 +124,50 @@
       "pages": ["soft-ui/introduction"]
     },
     {
-      "group": "API Documentation",
+      "group": "Config",
+      "pages": ["soft-ui/docs/theme-maintenance", "soft-ui/docs/theme-404"]
+    },
+    {
+      "group": "Required Configuration",
       "pages": [
-        "api-reference/introduction"
+        "soft-ui/docs/admin",
+        "soft-ui/docs/custom-theme-options",
+        "soft-ui/docs/icons",
+        "soft-ui/docs/index",
+        "soft-ui/docs/preloader",
+        "soft-ui/docs/storage"
       ]
     },
     {
-      "group": "Endpoint Examples",
+      "group": "Theme Config",
       "pages": [
-        "api-reference/endpoint/get",
-        "api-reference/endpoint/create",
-        "api-reference/endpoint/delete"
+        "soft-ui/docs/addons",
+        "soft-ui/docs/blacklisted",
+        "soft-ui/docs/color-scheme",
+        "soft-ui/docs/commands",
+        "soft-ui/docs/database-driver",
+        "soft-ui/docs/error",
+        "soft-ui/docs/footer",
+        "soft-ui/docs/locales",
+        "soft-ui/docs/log-handler",
+        "soft-ui/docs/meta",
+        "soft-ui/docs/premium",
+        "soft-ui/docs/sharding",
+        "soft-ui/docs/sidebar",
+        "soft-ui/docs/support-email",
+        "soft-ui/docs/sweet-alert",
+        "soft-ui/docs/website-name"
+      ]
+    },
+    {
+      "group": "Form Types",
+      "pages": [
+        "soft-ui/docs/formtypes/date",
+        "soft-ui/docs/formtypes/emoji-picker",
+        "soft-ui/docs/formtypes/multirow",
+        "soft-ui/docs/formtypes/number-picker",
+        "soft-ui/docs/formtypes/slider",
+        "soft-ui/docs/formtypes/tag-input"
       ]
     }
   ],
